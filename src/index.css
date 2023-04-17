@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ScheduleEditor */
+table {
+  width: 80%; /* Set the width of the table */
+  margin: 0 auto; /* Center the table horizontally */
+  font-size: 1.2em; /* Increase the font size */
+}
+/* ScheduleEditor */
+th, td {
+  padding: 10px; /* Add some padding to the cells */
+  border: 1px solid #ccc; /* Add a border to the cells */
+}

@@ -1,51 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import RealTimeCon from "../../Database/FirebaseCon";
+import { collection, DocumentData, onSnapshot } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import db from "../../Database/FirebaseCon";
 
-interface ScheduleItem {
-  id: number;
-  time: string;
-  monday: string;
-  tuesday: string;
-  wednesday: string;
-  thursday: string;
-  friday: string;
-}
 
 const Schedule = () => {
-  const [schedule, setSchedule] = useState<ScheduleItem[]>([]);
-  RealTimeCon();
-  useEffect(() => {
-    fetch('/api/schedule')
-      .then(response => response.json())
-      .then(data => setSchedule(data))
-      .catch(error => console.log(error));
-  }, []);
+  const [fag, setFag] = useState<DocumentData[]>([]);
+  
+
+  useEffect(
+    () =>
+     onSnapshot(collection(db, "Fag"), (snapshot) =>
+       setFag(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      ),
+    []
+  );
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>Monday</th>
-          <th>Tuesday</th>
-          <th>Wednesday</th>
-          <th>Thursday</th>
-          <th>Friday</th>
-        </tr>
-      </thead>
-      <tbody>
-        {schedule.map(row => (
-          <tr key={row.id}>
-            <td>{row.time}</td>
-            <td>{row.monday}</td>
-            <td>{row.tuesday}</td>
-            <td>{row.wednesday}</td>
-            <td>{row.thursday}</td>
-            <td>{row.friday}</td>
-          </tr>
+    <div className="root">
+      <ul>
+        {fag.map(fag =>(
+          <li>
+            {fag.navn}
+          </li>
         ))}
-      </tbody>
-    </table>
+      </ul>
+    </div>
   );
 };
 

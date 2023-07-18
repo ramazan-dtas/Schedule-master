@@ -1,6 +1,6 @@
 export interface Tidspunkt{
-    Tidspunkt_ID: number;
-    Dag: string;
-    Start_tidspunkt: Date;
-    Slut_tidspunkt: Date;
+    tidspunkt_ID: number;
+    dag: string;
+    start_tidspunkt: string;
+    slut_tidspunkt: string;
 }

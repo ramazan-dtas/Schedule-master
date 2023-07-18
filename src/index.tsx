@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Schedule from './Admin/Schedule/Schedule';
-import ScheduleEditorModal from './Admin/Schedule/ScheduleEditorModal';
-import ScheduleEditorButton from './Admin/Schedule/ScheduleEditorButton'
 import reportWebVitals from './reportWebVitals';
 
 
@@ -14,10 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Schedule />
-    <ScheduleEditorModal isOpen={false} onRequestClose={function (): void {
-      throw new Error('Function not implemented.');
-    } } />
-    <ScheduleEditorButton />
+
   </React.StrictMode>
 );
 

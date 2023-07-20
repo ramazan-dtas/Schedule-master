@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const config = require('./config');
+
 const userRoutes = require('./routes/user-routes');
 const userInfoRoute = require('./routes/userInfo-routes');
 const classRoutes = require('./routes/class-routes');
@@ -10,6 +11,7 @@ const cityRoutes = require('./routes/city-routes');
 const genderRoutes = require('./routes/gender-routes');
 const guardianRoutes = require('./routes/guardian-routes');
 const userGuardianRoutes = require('./routes/userGuardian-routes');
+const roleRoutes = require('./routes/role-routes');
 
 
 const app = express();
@@ -25,6 +27,7 @@ app.use('/api', cityRoutes.routes);
 app.use('/api', genderRoutes.routes);
 app.use('/api', guardianRoutes.routes);
 app.use('/api', userGuardianRoutes.routes);
+app.use('/api', roleRoutes.routes);
 
 
 

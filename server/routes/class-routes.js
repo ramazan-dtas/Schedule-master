@@ -6,7 +6,7 @@ router.post('/class', addClass);
 router.get('/all-class', getAllClass);
 router.get('/class/:id', getClass);
 router.put('/update/class/:id', updateClass);
-router.delete('/delete/class/:id', deleteClass)
+router.delete('/delete/class/:id', deleteClass);
 
 module.exports = {
     routes:router

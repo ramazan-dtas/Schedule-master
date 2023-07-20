@@ -12,7 +12,7 @@ const genderRoutes = require('./routes/gender-routes');
 const guardianRoutes = require('./routes/guardian-routes');
 const userGuardianRoutes = require('./routes/userGuardian-routes');
 const roleRoutes = require('./routes/role-routes');
-
+const institutionRoutes = require('./routes/institution-routes');
 
 const app = express();
 
@@ -28,6 +28,7 @@ app.use('/api', genderRoutes.routes);
 app.use('/api', guardianRoutes.routes);
 app.use('/api', userGuardianRoutes.routes);
 app.use('/api', roleRoutes.routes);
+app.use('/api', institutionRoutes.routes);
 
 
 

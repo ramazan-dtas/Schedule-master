@@ -9,6 +9,7 @@ const classRoutes = require('./routes/class-routes');
 const cityRoutes = require('./routes/city-routes');
 const genderRoutes = require('./routes/gender-routes');
 const guardianRoutes = require('./routes/guardian-routes');
+const userGuardianRoutes = require('./routes/userGuardian-routes');
 
 
 const app = express();
@@ -23,6 +24,7 @@ app.use('/api', classRoutes.routes);
 app.use('/api', cityRoutes.routes);
 app.use('/api', genderRoutes.routes);
 app.use('/api', guardianRoutes.routes);
+app.use('/api', userGuardianRoutes.routes);
 
 
 

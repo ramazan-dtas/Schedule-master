@@ -1,6 +1,6 @@
 class City{
-    constructor(id, city_name, post_code){
-        this.id=id;
+    constructor(city_Id, city_name, post_code){
+        this.city_Id=city_Id;
         this.city_name=city_name;
         this.post_code=post_code;
     }

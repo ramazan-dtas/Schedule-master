@@ -1,6 +1,6 @@
 class User{
-    constructor(id, surname, email, passwordHash, emailConfirmed,lockoutEnabled,phoneConfirmed,twofactorEnabled,tryFailedCount,lockoutEnd){
-        this.id=id;
+    constructor(user_Id, surname, email, passwordHash, emailConfirmed,lockoutEnabled,phoneConfirmed,twofactorEnabled,tryFailedCount,lockoutEnd){
+        this.user_Id=user_Id;
         this.surname=surname;
         this.email=email;
         this.passwordHash=passwordHash;

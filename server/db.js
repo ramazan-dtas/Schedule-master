@@ -1,6 +1,6 @@
-const firebase = require('firebase');
+const mysql = require('mysql2');
 const config = require('./config');
 
-const db = firebase.initializeApp(config.firebaseConfig);
+const db = mysql.createConnection(config);//firebase.initializeApp(config.firebaseConfig);
 
 module.exports = db;

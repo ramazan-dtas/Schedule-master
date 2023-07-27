@@ -1,6 +1,6 @@
 class Gender{
-    constructor(id, gender_name){
-        this.id=id;
+    constructor(gender_Id, gender_name){
+        this.gender_Id=gender_Id;
         this.gender_name=gender_name;
     }
 }
